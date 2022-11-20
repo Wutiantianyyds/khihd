@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 浅拷贝 只拷贝一层 如果是复杂数据类型 就是复制地址
+    // 深拷贝 不管这个对象有多少层 都会拷贝到值而不是地址
+
+
+    let arr = [{
+        name: "小明",
+        age: 18,
+        obj: {
+            city: "郑州"
+        },
+
+    },
+        10,
+        20,
+        30
+    ]
+
+    // 第一遍// 常见的浅拷贝有：展开运算符，concat object.assign
+    // console.log(arr);
+    // let arr2=[...arr]
+    // console.log(arr2);//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2=arr.concat()//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2 = Object.assign({}, arr)
+    // arr[0].name = "小丽"//修改第一个参数
+    // console.log(arr, arr2);//age: 18 name: "小丽"    obj : {city: '郑州'}
+    // 深拷贝
+    // let arr2=JSON.parse(JSON.stringify(arr))
+    // arr[0].name="小丽"
+    // console.log(arr,arr2);//arr  name: "小明"  arr2 name:"小丽"
+
+    /***
+     * 递归
+     ***/
+    let obj = {
+        name: "小明",
+        age: 10,
+        list: {
+            friend: "中牟",
+        },
+        children: [
+            { city: "郑州" },
+            {
+                city: "北京",
+                children: [{
+                    from: "上海"
+                }]
+            }
+        ]
+    }
+    // function deepcopy(obj){
+    //     let res={}
+    //     for(const key in obj){
+    //         if(obj[key] instanceof Object){
+    //             res[key]=deepcopy(obj[key])
+    //         }else{
+    //             res[key]=obj[key]
+    //         }
+    //     }
+    //     return res
+    // }
+    // let obj2=deepcopy(obj)
+    // console.log(obj2);
+    // let arr3=deepcopy(arr)
+    // console.log(arr3);
+
+    // 第2遍// 常见的浅拷贝有：展开运算符，concat object.assign
+    // console.log(arr);
+    // let arr2=[...arr]
+    // console.log(arr2);//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2=arr.concat()//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2 = Object.assign({}, arr)
+    // arr[0].name = "小丽"//修改第一个参数
+    // console.log(arr, arr2);//age: 18 name: "小丽"    obj : {city: '郑州'}
+    // 深拷贝
+    // let arr2=JSON.parse(JSON.stringify(arr))
+    // arr[0].name="小丽"
+    // console.log(arr,arr2);//arr  name: "小明"  arr2 name:"小丽"
+    /***
+        * 递归
+        ***/
+
+    // function deepcopy(obj) {
+    //     let res = {}
+    //     for (const key in obj) {
+    //         if (obj[key] instanceof Object) {
+    //             res[key] = deepcopy(obj[key])
+    //         } else {
+    //             res[key] = obj[key]
+    //         }
+    //     }
+    //     return res
+    // }
+    // let obj2 = deepcopy(obj)
+    // console.log(obj2);
+    // let arr3 = deepcopy(arr)
+    // console.log(arr3);
+
+
+
+    // 第3遍// 常见的浅拷贝有：展开运算符，concat object.assign
+    // console.log(arr);
+    // let arr2=[...arr]
+    // console.log(arr2);//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2=arr.concat()//age: 18 name: "小明"    obj : {city: '郑州'}
+    // let arr2 = Object.assign({}, arr)
+    // arr[0].name = "小丽"//修改第一个参数
+    // console.log(arr, arr2);//age: 18 name: "小丽"    obj : {city: '郑州'}
+    // 深拷贝
+    // let arr2=JSON.parse(JSON.stringify(arr))
+    // arr[0].name="小丽"
+    // console.log(arr,arr2);//arr  name: "小明"  arr2 name:"小丽"
+    /***
+       * 递归
+       ***/
+
+    function deepcopy(obj) {
+        let res = {}
+        for (const key in obj) {
+            if (obj[key] instanceof Object) {
+                res[key] = deepcopy(obj[key])
+            } else {
+                res[key] = obj[key]
+            }
+        }
+        return res
+    }
+    let obj2 = deepcopy(obj)
+    console.log(obj2);
+    let arr3 = deepcopy(arr)
+    console.log(arr3);
+</script>
+
+</html>

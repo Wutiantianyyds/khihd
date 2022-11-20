@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 数据类型的判断（基本数据类型和引用数据类型）（typeof，instancof，constructor，prototy四种检测方法）
+   
+    
+    let num=123
+    let str='123'
+    let bool=true
+    let arr=[]
+    let obj={}
+    let fn=function(){}
+    let cla=class{}
+    let number=new Number(12)
+    console.log('typeof判断数据类型');
+    // 对于基本类型除了null以外都可以返回正确结果
+    //对于引用类型 除了function以外都返回的是obj
+    console.log(typeof num);//number
+    console.log(typeof str);//string
+    console.log(typeof bool);//boolean
+    console.log(typeof null);//object 判断null就是object
+    console.log(typeof arr);//object
+    console.log(typeof undefined);//undefined
+    console.log(typeof Object);
+    console.log(typeof fn)
+    console.log(typeof cla)
+    console.log(typeof aaaaaa)
+
+
+    console.log('instancof判断数据类型');
+    //instancof 返回的都是布尔值 他不能判断基本数据类型
+    console.log(number instanceof Number);
+    console.log(num instanceof Number);
+    console.log(str instanceof String);
+    console.log(bool instanceof Boolean);
+    console.log(null instanceof Object);
+    console.log(undefined instanceof Object);
+    console.log(arr instanceof Array);
+    console.log(arr instanceof Object);
+    console.log(obj instanceof Object);
+    console.log(fn instanceof Function);
+    console.log(fn instanceof Object);
+    console.log(cla instanceof Function);
+    console.log(cla instanceof Object);
+
+    console.log('constructor判断类型');
+    //constructor判断类型基本上什么都能判断出来除了null和undefined是无效的
+    console.log(num.constructor);
+    console.log(str.constructor);
+    console.log(bool.constructor);
+    console.log(arr.constructor);
+    console.log(obj.constructor);
+    console.log(fn.constructor);
+    console.log(cla.constructor);
+
+    console.log('prototy判断类型');
+    console.log(Object.prototype.toString.call(num));
+    console.log(Object.prototype.toString.call(str));
+    console.log(Object.prototype.toString.call(bool));
+    console.log(Object.prototype.toString.call(null));
+    console.log(Object.prototype.toString.call(undefined));
+    console.log(Object.prototype.toString.call(arr));
+    console.log(Object.prototype.toString.call(obj));
+    console.log(Object.prototype.toString.call(fn));
+    console.log(Object.prototype.toString.call(cla));
+
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 原型 显式原型 prototype
+// 构造函数都有显式原型 上面放的是能够被所有实例化对象所使用的属性和方法
+
+// 隐式原型 \*\* ———proto--
+// 每一个实例都有隐式原型 指向构造函数的显式原型
+
+// constructor
+// 本身是构造函数的意思 每一个显式原型上都有一个构造函数指向 构造函数本身
+
+// 原型链
+// 一个对象 如果自己的构造函数里有这个方法就用自己的 如果没有 就用它继承的，一层一层找，最终会找到 object
+
+// // 第一遍
+// // 原型
+
+// var a = [1,2,3];
+// a.__proto__ === Array.prototype; // true
+
+// // 原型链
+
+// function Parent(month){
+//     this.month = month;
+// }
+ 
+// var child = new Parent('Ann');
+ 
+// console.log(child.month); // Ann
+ 
+// console.log(child.father); // undefined
+
+// // 第二遍
+// // 原型
+
+// var a = [1,2,3];
+// a.__proto__ === Array.prototype; // true
+
+// // 原型链
+
+// function Parent(month){
+//     this.month = month;
+// }
+ 
+// var child = new Parent('Ann');
+ 
+// console.log(child.month); // Ann
+ 
+// console.log(child.father); // undefined
+
+// 第三遍
+// 原型
+
+var a = [1,2,3];
+a.__proto__ === Array.prototype; // true
+
+// 原型链
+
+function Parent(month){
+    this.month = month;
+}
+ 
+var child = new Parent('Ann');
+ 
+console.log(child.month); // Ann
+ 
+console.log(child.father); // undefined
+</script>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>肾疼</li>
+        <li>麻利</li>
+    </ul>
+</body>
+<script>
+    // 解构赋值
+	// 对象解构
+	// 	根据属性名解构，可以解构任何属性，可以单解构出一个值
+
+	// 数组解构
+	// 	根据下标解构，从左到右的顺序解构，可以从数组中提取值，按照对应位置对变量赋值，不能单独解构出一个值。
+// 只要等号两边 的模式相同，左边的变量就会被赋予对应的值。
+    //第一遍
+    // const F4 = ['肖战', '王一博', '王源', '蔡徐坤']
+    // let [a, c, b, d] = F4
+    // console.log(d);
+    // const ZHAO = {
+    //     name: '赵本山',
+    //     age: 18,
+    //     job: function () {
+    //         console.log('小品创造者');
+    //     }
+    // }
+    // let { name } = ZHAO
+    // console.log(name);
+
+
+
+    // let resulta = '<ul>' +
+    //     '<li>肾疼</li>' +
+    //     '<li>麻利</li>' +
+    //     '</ul>'
+
+    // let eat = `
+    // <ul>
+    //     <li>肾疼</li>
+    //     <li>麻利</li>
+    // </ul>
+    // `
+    // document.write(eat)
+    // document.write(resulta)
+    
+    // let name1='搞笑'
+    // let hope=function(){
+    //     console.log('我希望吃饭');
+    // }
+    // const pdwhr={
+    //     name1,
+    //     hope,
+    // }
+    // console.log(name1,hope);
+    // function getname(){
+    //     console.log(this.name);
+    // }
+    // let getname2=()=>{
+    //     console.log(this.name);
+    // }
+    // window.name='吴'
+    // const school={
+    //     name:"hukwh"
+    // }
+    // getname()
+    // getname2()
+    // getname.call(school)
+    // getname2.call(school)
+     //第二遍
+    // const F4 = ['肖战', '王一博', '王源', '蔡徐坤']
+    // let [a, c, b, d] = F4
+    // console.log(d);
+    // const ZHAO = {
+    //     name: '赵本山',
+    //     age: 18,
+    //     job: function () {
+    //         console.log('小品创造者');
+    //     }
+    // }
+    // let { name } = ZHAO
+    // console.log(name);
+
+
+
+    // let resulta = '<ul>' +
+    //     '<li>肾疼</li>' +
+    //     '<li>麻利</li>' +
+    //     '</ul>'
+
+    // let eat = `
+    // <ul>
+    //     <li>肾疼</li>
+    //     <li>麻利</li>
+    // </ul>
+    // `
+    // document.write(eat)
+    // document.write(resulta)
+    
+    // let name1='搞笑'
+    // let hope=function(){
+    //     console.log('我希望吃饭');
+    // }
+    // const pdwhr={
+    //     name1,
+    //     hope,
+    // }
+    // console.log(name1,hope);
+    // function getname(){
+    //     console.log(this.name);
+    // }
+    // let getname2=()=>{
+    //     console.log(this.name);
+    // }
+    // window.name='吴'
+    // const school={
+    //     name:"hukwh"
+    // }
+    // getname()
+    // getname2()
+    // getname.call(school)
+    // getname2.call(school)
+     //第三遍
+    const F4 = ['肖战', '王一博', '王源', '蔡徐坤']
+    let [a, c, b, d] = F4
+    console.log(d);
+    const ZHAO = {
+        name: '赵本山',
+        age: 18,
+        job: function () {
+            console.log('小品创造者');
+        }
+    }
+    let { name } = ZHAO
+    console.log(name);
+
+
+
+    let resulta = '<ul>' +
+        '<li>肾疼</li>' +
+        '<li>麻利</li>' +
+        '</ul>'
+
+    let eat = `
+    <ul>
+        <li>肾疼</li>
+        <li>麻利</li>
+    </ul>
+    `
+    document.write(eat)
+    document.write(resulta)
+    
+    let name1='搞笑'
+    let hope=function(){
+        console.log('我希望吃饭');
+    }
+    const pdwhr={
+        name1,
+        hope,
+    }
+    console.log(name1,hope);
+    function getname(){
+        console.log(this.name);
+    }
+    let getname2=()=>{
+        console.log(this.name);
+    }
+    window.name='吴'
+    const school={
+        name:"hukwh"
+    }
+    getname()
+    getname2()
+    getname.call(school)
+    getname2.call(school)
+</script>
+
+</html>

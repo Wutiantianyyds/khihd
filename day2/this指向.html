@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // 1. 构造函数
+    //    构造函数里的 this 指向实例化对象
+    // 2. 箭头函数
+    //    箭头函数里没有 this，用的 this 是上层所在环境的 this
+    // 3. 函数是对象的属性
+    //    this 指向这个对象
+    // 4. dom 节点调用一个事件 就指向这个 dom
+    // 5. 全局调用 就指向 widnow
+    // 6. 计时器里的 this 永远指向 window
+
+    // 第一遍
+    //  function People(name) {
+    //         this.name = name;
+    //     }
+    //     let xiaoming = new People("小明");
+    //     console.log(xiaoming.name);
+    //     //构造函数里this指向实例化
+
+    //     function fn() {
+    //         console.log(this);
+    //     }
+    //     fn();
+    //     //全局调用指向window
+
+    //     let obj = {
+    //         msg: "objobjobj",
+    //         say: fn,
+    //     };
+
+    //     obj.say();
+    //     // 放在对象里作为属性 指向这个对象
+
+    //     setTimeout(function() {
+    //         console.log(this);
+    //     }, 1000);
+
+    // 计时器里this永远是widnow 所以我们一般用箭头函数 指向 上一层的this
+    // 第二遍
+    //  function People(name) {
+    //         this.name = name;
+    //     }
+    //     let xiaoming = new People("小明");
+    //     console.log(xiaoming.name);
+
+    //     function fn() {
+    //         console.log(this);
+    //     }
+    //     fn();
+
+    //     let obj = {
+    //         msg: "objobjobj",
+    //         say: fn,
+    //     };
+
+    //     obj.say();
+
+    //     setTimeout(function() {
+    //         console.log(this);
+    //     }, 1000);
+
+    // 第二遍
+    function People(name) {
+        this.name = name;
+    }
+    let xiaoming = new People("小明");
+    console.log(xiaoming.name);
+
+    function fn() {
+        console.log(this);
+    }
+    fn();
+
+    let obj = {
+        msg: "objobjobj",
+        say: fn,
+    };
+
+    obj.say();
+
+    setTimeout(function () {
+        console.log(this);
+    }, 1000);
+</script>
+
+</html>
