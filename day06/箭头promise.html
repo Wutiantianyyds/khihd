@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 封装promise函数
+        // const res0=`当前`
+        // const res1=`后面`
+        // const res2=`wfd`
+        // const p=(res1)=>{
+        //     return new Promise((res,err)=>{
+        //         res(res1)
+        //     })
+        // }
+        // p(res0).then(res=>{
+        //     console.log(res);
+        //     return res
+        // }).then((data)=>{
+        //     return p(res1).then(res=>{
+        //         console.log(res);
+        //         return data + res
+        //     })
+        // }).then((data1)=>{
+        //     p(res2).then(res=>{
+        //         console.log(res);
+        //         console.log(data1 + res);
+        //     })
+        // })
+
+
+        // 封装promise函数
+        // const res0=`当前`
+        // const res1=`后面`
+        // const res2=`wfd`
+        // const p=(res1)=>{
+        //     return new Promise((res,err)=>{
+        //         res(res1)
+        //     })
+        // }
+        // p(res0).then(res=>{
+        //     console.log(res);
+        //     return res
+        // }).then((data)=>{
+        //     return p(res1).then(res=>{
+        //         console.log(res);
+        //         return data + res
+        //     })
+        // }).then((data1)=>{
+        //     p(res2).then(res=>{
+        //         console.log(res);
+        //         console.log(data1 + res);
+        //     })
+        // })
+
+        封装promise函数
+        const res0=`当前`
+        const res1=`后面`
+        const res2=`wfd`
+        const p=(res1)=>{
+            return new Promise((res,err)=>{
+                res(res1)
+            })
+        }
+        p(res0).then(res=>{
+            console.log(res);
+            return res
+        }).then((data)=>{
+            return p(res1).then(res=>{
+                console.log(res);
+                return data + res
+            })
+        }).then((data1)=>{
+            p(res2).then(res=>{
+                console.log(res);
+                console.log(data1 + res);
+            })
+        })
+    </script>
+</body>
+</html>
