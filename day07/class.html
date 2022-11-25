@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 传统es5方法
+        // function Points(x,y){
+        //     this.x = x
+        //     this.y = y
+        // }
+        // Points.prototype.toString=function(){
+        //     return `(` + this.x + `,` + this.y + `)`
+        // }
+        // var p1=new Points(1,2)
+        // let results=p1.toString()
+        // console.log(results);
+
+        // // es6class方法
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toString(){
+        //     return `(` + this.x + `,` + this.y + `)`
+        // }
+        // }
+        
+    
+        // let p = new Point(1, 2)
+        // let result = p.toString()
+        // console.log(result);
+
+        // function Points(x,y){
+        //     this.x = x
+        //     this.y = y
+        // }
+        // Points.prototype.toString=function(){
+        //     return `(` + this.x + `,` + this.y + `)`
+        // }
+        // var p1=new Points(1,2)
+        // let results=p1.toString()
+        // console.log(results);
+
+        // // es6class方法
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toString(){
+        //     return `(` + this.x + `,` + this.y + `)`
+        // }
+        // }
+        
+    
+        // let p = new Point(1, 2)
+        // let result = p.toString()
+        // console.log(result);
+
+
+        function Points(x,y){
+            this.x = x
+            this.y = y
+        }
+        Points.prototype.toString=function(){
+            return `(` + this.x + `,` + this.y + `)`
+        }
+        var p1=new Points(1,2)
+        let results=p1.toString()
+        console.log(results);
+
+        // es6class方法
+        class Point {
+            constructor(x, y) {
+                this.x = x
+                this.y = y
+            }
+            toString(){
+            return `(` + this.x + `,` + this.y + `)`
+        }
+        }
+        
+    
+        let p = new Point(1, 2)
+        let result = p.toString()
+        console.log(result);
+    </script>
+</body>
+
+</html>

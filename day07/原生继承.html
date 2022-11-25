@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //       function Phone(brand,price){
+    //         this.brand=brand
+    //         this.price=price
+    //     }
+    //     Phone.prototype.call=function(){
+    //         console.log('我可以打游戏');
+    //     }
+    //    function SmartPhone(brand,price,color,size){
+    //     Phone.call(this,brand,price)
+    //     this.color=color
+    //     this.size=size
+    //    }
+    // //    设置子级构造函数
+    // SmartPhone.prototype=new Phone
+    // SmartPhone.prototype.constructor=SmartPhone
+    // //声明
+    // SmartPhone.prototype.photo=function(){
+    //     console.log('我可以看视频');
+    // }
+    // SmartPhone.prototype.playGame=function(){
+    //     console.log('我可以玩游戏');
+    // }
+    // const sdhjk=new SmartPhone('肖战','99999','红色','20')
+    // console.log(sdhjk);
+
+
+    // function Phone(brand,price){
+    //         this.brand=brand
+    //         this.price=price
+    //     }
+    //     Phone.prototype.call=function(){
+    //         console.log('我可以打游戏');
+    //     }
+    //    function SmartPhone(brand,price,color,size){
+    //     Phone.call(this,brand,price)
+    //     this.color=color
+    //     this.size=size
+    //    }
+    // //    设置子级构造函数
+    // SmartPhone.prototype=new Phone
+    // SmartPhone.prototype.constructor=SmartPhone
+    // //声明
+    // SmartPhone.prototype.photo=function(){
+    //     console.log('我可以看视频');
+    // }
+    // SmartPhone.prototype.playGame=function(){
+    //     console.log('我可以玩游戏');
+    // }
+    // const sdhjk=new SmartPhone('肖战','99999','红色','20')
+    // console.log(sdhjk);
+
+
+
+
+
+    function Phone(brand,price){
+            this.brand=brand
+            this.price=price
+        }
+        Phone.prototype.call=function(){
+            console.log('我可以打游戏');
+        }
+       function SmartPhone(brand,price,color,size){
+        Phone.call(this,brand,price)
+        this.color=color
+        this.size=size
+       }
+    //    设置子级构造函数
+    SmartPhone.prototype=new Phone
+    SmartPhone.prototype.constructor=SmartPhone
+    //声明
+    SmartPhone.prototype.photo=function(){
+        console.log('我可以看视频');
+    }
+    SmartPhone.prototype.playGame=function(){
+        console.log('我可以玩游戏');
+    }
+    const sdhjk=new SmartPhone('肖战','99999','红色','20')
+    console.log(sdhjk);
+    </script>
+</body>
+</html>
