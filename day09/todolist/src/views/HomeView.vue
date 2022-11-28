@@ -51,7 +51,7 @@
         <p @click="change(3)" :class="{ active: falg == 3 }">Completed</p>
         <p @click="delAll(4)" :class="{ active: falg == 4 }">Clear Completed</p>
       </div>
-        <div id="bottombox" v-if="flag == false">
+        <div id="bottombox" v-else>
             <span id="right">Congrat, you have no more tasks to do</span>
         </div>
     </div>
