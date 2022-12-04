@@ -12,6 +12,11 @@ export default new Vuex.Store({
   mutations: {
     add(state,obj){
       state.list.push({...obj})
+    },
+    serve(state,val){
+      state.list[val.index].name=val.name
+      state.list[val.index].status=val.status
+      state.list[val.index].date=val.date
     }
   },
   actions: {
