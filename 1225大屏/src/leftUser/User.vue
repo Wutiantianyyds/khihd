@@ -1,5 +1,5 @@
 <template>
-  <div class="tousers" style="width: 100%; height: 13%; background: #424345; padding: 10px">
+  <div class="tousers" style="width: 100%; height: 15%; background: #424345; padding: 10px">
     <h4 style="font-size: 16px">慕课外卖用户总数</h4>
     <p style="font-size: 8px; color: #fff">User Total Count</p>
     <h3 style="font-size: 30px; line-height: 40px">1,739,913</h3>

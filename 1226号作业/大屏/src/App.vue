@@ -10,9 +10,7 @@
         <Overview />
         <Category />
       </div>
-      <div class="right">
-				<Navtop />
-			</div>
+      <div class="right"></div>
     </div>
   </div>
 </template>
@@ -31,8 +29,6 @@ import Eender from "@/leftGender/Gender.vue"
 import Overview from "@/leftOverview/Overview.vue"
 /***品类**/
 import Category from "@/leftCategory/Category.vue"
-/**今日数据**/
-import Navtop from "@/rightNav/Navtop.vue"
 export default {
   data() {
     return {}
@@ -46,8 +42,7 @@ export default {
     Equip,
     Eender,
     Overview,
-    Category,
-		Navtop
+    Category
   },
   computed: {},
   watch: {}
@@ -65,14 +60,14 @@ export default {
 html,
 body,
 #app {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: #1c1c1c;
 }
 
 .con {
   width: 100%;
-  height: 94%;
+  height: calc(100% - 40px);
   display: flex;
   align-items: center;
   padding: 5px;
@@ -86,7 +81,6 @@ body,
   .right {
     flex: 8;
     height: 100%;
-		margin-left: 10px;
   }
 }
 </style>
