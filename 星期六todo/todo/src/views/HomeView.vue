@@ -77,7 +77,7 @@ export default {
         .split(" ")[0]
         .split("/")
         .join("-");
-      //数字补0判断
+      //数字补0判
       if (str.length < 10) {
         let newtime = this.insertStr(str, 8, "0");
         this.form.date = newtime;
