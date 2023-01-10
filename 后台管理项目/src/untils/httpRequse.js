@@ -87,9 +87,6 @@ http.interceptors.response.use(
         case 500:
           title = '内部服务器错误'
           break
-        case 500:
-          title = '内部服务器错误'
-          break
         case 501:
           title = '未实现'
           break
